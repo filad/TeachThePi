@@ -103,7 +103,7 @@ class NeuralNet (threading.Thread):
                         self.distances.append(['Blue', np.sqrt(np.sum((liveLogit - blueLogit)**2 , axis=0))])
                 
                 
-                    # sort list of lists by the second element, ascentind
+                    # sort list of lists by the second element, ascending
                     self.distances.sort(key = lambda x: x[1])
                     
                     for i in self.distances[0:self.K]:
